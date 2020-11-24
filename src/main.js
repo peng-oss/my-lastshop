@@ -4,12 +4,19 @@ import router from './router'
 import  './assets/css/global.css'
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
-
+import './assets/fonts/iconfont.css'
 import axios from 'axios'
 import VueAxios from 'vue-axios'
 
+
 Vue.use(VueAxios, axios)
 axios.defaults.baseURL='http://timemeetyou.com:8889/api/private/v1/'
+axios.interceptors.request.use(config=>{
+  config.headers.Authorization=window.sessionStorage.getItem('token')
+  return config
+}
+  )
+
 Vue.config.productionTip = false
 Vue.use(ElementUI);
 new Vue({

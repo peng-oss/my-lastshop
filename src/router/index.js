@@ -2,6 +2,8 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Login from '../components/Login.vue'
 import home from '../components/home.vue'
+import welcome from '../components/welcome.vue'
+import user from '../components/user/users.vue'
 Vue.use(VueRouter)
 
 
@@ -15,19 +17,29 @@ const router = new VueRouter({
       path:'/login',component:Login
     },
     {
-      path:'/home',component:home
+      path:'/home',component:home,
+      redirect:'/welcome',
+      children:[{
+        path:'/welcome',component:welcome
+      },
+      {
+        path:'/users',component:user
+      }]
     },
     
   ]
 })
-router.beforeEach((to,from,next)=>{
-  /* to表示想要去哪个页面 ，form表示从哪来的，next是一个方法，next（）直接放行，next（‘/login’）强制跳转到哪里 */
+/* router.beforeEach((to,from,next)=>{
+   to表示想要去哪个页面 ，form表示从哪来的，next是一个方法，next（）直接放行，next（‘/login’）强制跳转到哪里 
   if(to.path==="/login") return next()
   if(to.path==="/home") {
-    const tokenstr=sessionStorage.getItem('token')
+    let tokenstr=sessionStorage.getItem('token')
     if(!tokenstr) return next("/login")
     next()
   }
-})
+   if(to.path==='/welcome'){
+  return  next()
+  } 
+}) */
 
 export default router

@@ -4,3 +4,12 @@ html,body,#app{
     padding:0
 
 }
+.el-breadcrumb{
+    margin-bottom:20px ;
+}
+.el-table{
+    margin-top: 20px;
+}
+.el-pagination{
+    margin-top: 30px;
+}

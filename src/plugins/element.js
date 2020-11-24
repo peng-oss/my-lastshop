@@ -1,13 +1,50 @@
 import vue from 'vue'
-import button from 'element-ui'
+import Button from 'element-ui'
 import {Form,FormItem} from 'element-ui'
 import {Input} from 'element-ui'
 import {rules} from 'element-ui'
 import { Message } from 'element-ui';
-
-vue.use(button)
+import { Container } from 'element-ui';
+import { Aside } from 'element-ui';
+import { Main } from 'element-ui';
+import { Header } from 'element-ui';
+import {Menu } from 'element-ui';
+import {Submenu  } from 'element-ui';
+import {MenuItem} from 'element-ui';
+import {Breadcrumb} from 'element-ui';
+import {BreadcrumbItem} from 'element-ui';
+import {Card} from 'element-ui';
+import {Row} from 'element-ui';
+import {Col} from 'element-ui';
+import {Table} from 'element-ui';
+import {TableColumn} from 'element-ui';
+import {Switch} from 'element-ui';
+import {Tooltip} from 'element-ui';
+import {Pagination} from 'element-ui';
+import {Dialog} from 'element-ui';
+import { MessageBox } from 'element-ui';
+vue.use(Button)
 vue.use(Form)
 vue.use(FormItem)
 vue.use(Input)
 vue.use(rules)
 Vue.prototype.$message=Message
+vue.use(Container)
+vue.use(Aside )
+vue.use(Main )
+vue.use( Menu)
+vue.use( Submenu )
+vue.use( Header )
+vue.use( Breadcrumb)
+vue.use( MenuItem)
+vue.use( BreadcrumbItem)
+vue.use( Card)
+vue.use( Row)
+vue.use( Col)
+vue.use( Table)
+vue.use(TableColumn)
+vue.use(Switch)
+vue.use(Tooltip)
+vue.use(Pagination)
+vue.use(Dialog)
+Vue.prototype.$confirm=MessageBox.confirm
