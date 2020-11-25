@@ -23,7 +23,14 @@ import {Tooltip} from 'element-ui';
 import {Pagination} from 'element-ui';
 import {Dialog} from 'element-ui';
 import { MessageBox } from 'element-ui';
+import { Tag } from 'element-ui';
+import { Tree } from 'element-ui';
+import { Select } from 'element-ui';
+import { Option} from 'element-ui';
+vue.use(Select)
+vue.use(Option)
 vue.use(Button)
+vue.use(Tree)
 vue.use(Form)
 vue.use(FormItem)
 vue.use(Input)
@@ -47,4 +54,5 @@ vue.use(Switch)
 vue.use(Tooltip)
 vue.use(Pagination)
 vue.use(Dialog)
+vue.use(Tag)
 Vue.prototype.$confirm=MessageBox.confirm
