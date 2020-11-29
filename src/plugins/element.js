@@ -28,9 +28,17 @@ import { Tree } from 'element-ui';
 import { Select } from 'element-ui';
 import { Option} from 'element-ui';
 import { Cascader} from 'element-ui';
-
+import { Steps} from 'element-ui';
+import { Step} from 'element-ui';
+import {CheckboxGroup} from 'element-ui';
+import { Checkbox} from 'element-ui';
+import { Upload} from 'element-ui';
 vue.use(Select)
-
+vue.use(Upload)
+vue.use(CheckboxGroup)
+vue.use(Checkbox)
+vue.use(Step)
+vue.use(Steps)
 vue.use( Cascader)
 vue.use(Option)
 vue.use(Button)

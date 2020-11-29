@@ -14,3 +14,12 @@ html,body,#app{
 .el-pagination{
     margin-top: 30px;
 }
+.el-steps{
+margin:15px 0
+}
+.el-step_title{
+    font-size: 13px;
+}
+.quill-editor{
+    min-height: 300px !important;
+}
