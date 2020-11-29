@@ -33,7 +33,11 @@ import { Step} from 'element-ui';
 import {CheckboxGroup} from 'element-ui';
 import { Checkbox} from 'element-ui';
 import { Upload} from 'element-ui';
+import { Timeline} from 'element-ui';
+import { TimelineItem} from 'element-ui';
 vue.use(Select)
+vue.use(Timeline)
+vue.use(TimelineItem)
 vue.use(Upload)
 vue.use(CheckboxGroup)
 vue.use(Checkbox)
